@@ -1,36 +1,15 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+### [프로젝트 생성]
+1. 새 프로젝트 > React > 프로젝트타입 : Next.js
+2. 프롬프트 선택
+   - TypeScript(타입 스크립트로 만들것인지 여부) - No
+   - ESLint?(코드 문법검사, 스타일 규칙 적용 여부) - Yes
+   - Tailwind CSS(테일윈드를 ui프레임워크로 사용여부) - Yes
+   - src / directory(코드를 src 폴더안에 넣을 것인지) - Yes
+   - App Router(Next.js 최신 라우팅 app/ 구조 사용여부) - Yes
+   - customize import alias(import 별칭 기본값에서 변경 여부 기본값 : @/*) - No
+   - Turbopack for next dev?(번들러를 Turbopack 사용) - Yes
+3. src 하위 `components`, `lib` 디렉토리 생성
+4. app 하위 `api/ping/route.js` 생성
