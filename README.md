@@ -47,3 +47,23 @@ export async function GET() {
 ### [ProductCard.jsx]
 - 상품 이름, 가격 표시, 태그 표시
 - props로 받은 데이터를 기반으로 렌더링
+
+### [동적 라우팅 정리]
+
+- App Router에서 폴더 이름을 대괄호로 감싸면 URL 파라미터로 인식됨
+   - `src/app/day/[id]/page.js` → `/day/1`, `/day/2` 등에서 `params.id`로 값 전달
+   - `src/app/member/[id]/page.js` → `/member/1`, `/member/winte` 등에서 `params.id`로 값 전달
+
+- 기본 동작
+   - 폴더 구조가 곧 라우팅 규칙
+   - `[id]` 위치에 들어오는 문자열이 자동으로 `params.id`에 매핑됨
+   - 같은 상위 폴더에 `layout.js`가 있으면, 경로 전환 시 공통 레이아웃은 유지되고 자식 페이지만 교체 렌더링
+
+- 샘플 경로와 매핑 예
+   - `/day/3`  → `params.id = "3"`
+   - `/member/42` → `params.id = "42"`
+
+- 확인 포인트
+   - 파일 경로: `src/app/<segment>/[id]/page.js`
+   - 컴포넌트 시그니처: `export default function Page({ params }) { ... }`
+   - 값 접근: `params.id`
