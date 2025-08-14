@@ -67,3 +67,5 @@ export async function GET() {
    - 파일 경로: `src/app/<segment>/[id]/page.js`
    - 컴포넌트 시그니처: `export default function Page({ params }) { ... }`
    - 값 접근: `params.id`
+
+- axios.get("url?param=${param}") 형태로 `route.js`에 요청을 보낸 후 파라미터에 따른 결과 받아와서 렌더링
