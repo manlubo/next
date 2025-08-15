@@ -69,3 +69,8 @@ export async function GET() {
    - 값 접근: `params.id`
 
 - axios.get("url?param=${param}") 형태로 `route.js`에 요청을 보낸 후 파라미터에 따른 결과 받아와서 렌더링
+
+### [Props + 동적 라우팅 연계]
+- 데이터는 src/data에 모듈화하여 정적/동적 페이지에서 공용 사용
+- 정적 페이지에서는 배열 데이터를 .map()으로 반복 렌더링
+- 동적 페이지(member/[id])에서는 params.id로 해당 데이터 조회 후 props 전달

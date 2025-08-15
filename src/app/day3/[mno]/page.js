@@ -3,8 +3,8 @@ import axios from "axios";
 export default async function Page({params}){
   // const mno = await params.mno;
   const {mno} = await params;
-  const res = await axios.get("http://localhost:3001/api/ping")
-  const res1 = await axios.get(`http://localhost:3001/api/user?mno=${mno}`);
+  const res = await axios.get("http://localhost:3000/api/ping")
+  const res1 = await axios.get(`http://localhost:3000/api/user?mno=${mno}`);
 
   return (
     <main>
