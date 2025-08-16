@@ -74,3 +74,30 @@ export async function GET() {
 - 데이터는 src/data에 모듈화하여 정적/동적 페이지에서 공용 사용
 - 정적 페이지에서는 배열 데이터를 .map()으로 반복 렌더링
 - 동적 페이지(member/[id])에서는 params.id로 해당 데이터 조회 후 props 전달
+
+### [State 개념]
+- 컴포넌트 내부에서 관리하는 값
+- useState Hook으로 선언
+- setState 호출 시 컴포넌트가 다시 렌더링됨
+
+### [Props와의 차이]
+- props: 부모 → 자식으로 전달
+- state: 컴포넌트 내부에서 직접 관리
+
+### [폼 입력값 관리]
+- input의 value와 onChange를 state와 연결
+- 여러 개 입력값을 각각 또는 객체 state로 관리
+
+### [부모 → 자식 함수 전달 (onSave)]
+- 부모에서 함수를 정의해 props로 전달
+- 자식이 onSave(데이터) 호출 → 부모 state 업데이트
+
+### [배열 state 업데이트]
+- 불변성 유지: 기존 배열을 직접 수정하지 않음
+- 스프레드 연산자(...)로 새 배열을 만들어 교체
+- 예: setProfiles([...profiles, profile])
+
+### [실행 흐름]
+- 사용자가 Form 입력 → 저장 클릭
+- 자식이 onSave 호출 → 부모 state 업데이트
+- 부모가 새로운 배열로 교체 → 리스트 다시 렌더링
