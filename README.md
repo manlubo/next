@@ -106,3 +106,8 @@ export async function GET() {
 - 부모 컴포넌트에서 props로 전달된 사용자 정의 함수
 - 자식 컴포넌트가 이벤트 발생 시 호출하여 부모 state 업데이트
 - 네이밍 관습상 onSomething 형태로 작성 (ex: onAdd, onSave)
+
+### [조건부 렌더링]
+- JSX에서 조건에 따라 다른 UI를 표시하는 방법
+- if, 삼항연산자(?:), && 연산자 사용
+- state나 props 값에 따라 화면 분기 처리  
