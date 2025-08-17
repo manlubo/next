@@ -101,3 +101,8 @@ export async function GET() {
 - 사용자가 Form 입력 → 저장 클릭
 - 자식이 onSave 호출 → 부모 state 업데이트
 - 부모가 새로운 배열로 교체 → 리스트 다시 렌더링
+
+### [onSomething - 사용자 정의 이벤트 함수]
+- 부모 컴포넌트에서 props로 전달된 사용자 정의 함수
+- 자식 컴포넌트가 이벤트 발생 시 호출하여 부모 state 업데이트
+- 네이밍 관습상 onSomething 형태로 작성 (ex: onAdd, onSave)
